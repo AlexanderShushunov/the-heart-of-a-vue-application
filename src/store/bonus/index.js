@@ -1,0 +1,1 @@
+export { bonus } from './bonus'
