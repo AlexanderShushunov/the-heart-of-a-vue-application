@@ -1,1 +1,1 @@
-export { fraudDetection } from './fraudDetection'
+export { createFraudDetectionDomain } from './fraudDetection'

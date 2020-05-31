@@ -1,1 +1,1 @@
-export { client } from './client'
+export { createClientDomain } from './client'

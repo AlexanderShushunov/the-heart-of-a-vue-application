@@ -1,1 +1,1 @@
-export { bonus } from './bonus'
+export { createBonusDomain } from './bonus'
