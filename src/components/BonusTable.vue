@@ -1,5 +1,5 @@
 <template>
-  <table>
+  <table class="bonus-table">
     <tr>
       <th>Имя</th>
       <th>Бонусы</th>
@@ -9,23 +9,33 @@
         :key="name"
     >
       <td>{{ name }}</td>
-      <td>{{ amount }}</td>
+      <FlashCell :value="amount"/>
     </tr>
   </table>
 </template>
 
 <script>
+import FlashCell from './FlashCell'
+
 export default {
   name: 'BonusTable',
   computed: {
     rows: function () {
-      console.log(this)
       const bonus = this.$store.state.bonus
       return Object.keys(bonus).map(name => ({
         name,
         amount: bonus[name]
       }))
     }
+  },
+  components: {
+    FlashCell
   }
 }
 </script>
+
+<style scoped>
+  .bonus-table {
+    font-size: 2rem;
+  }
+</style>

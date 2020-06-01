@@ -1,19 +1,22 @@
 <template>
   <div class="transitions">
-    <label class="transitions__amount">
-      Amount: <input type="number" v-model="amount">
-    </label>
     <button
         class="transitions__to-sasha"
         @click="addToSasha"
     >
-      Add To Sasha
+      Саше 30
     </button>
     <button
         class="transitions__to-petya"
         @click="addToPetya"
     >
-      Add To Petya
+      Пете 40
+    </button>
+    <button
+        class="transitions__to-petya"
+        @click="addToPetya200"
+    >
+      Пете 200
     </button>
   </div>
 </template>
@@ -33,10 +36,13 @@ export default {
       'processBonus'
     ]),
     addToSasha () {
-      this.processBonus({ name: 'Sasha', value: Number(this.amount) })
+      this.processBonus({ name: 'Sasha', value: 30 })
     },
     addToPetya () {
-      this.processBonus({ name: 'Petya', value: Number(this.amount) })
+      this.processBonus({ name: 'Petya', value: 40 })
+    },
+    addToPetya200 () {
+      this.processBonus({ name: 'Petya', value: 200 })
     }
 
   }
@@ -46,22 +52,8 @@ export default {
 <style scoped>
   .transitions {
     display: grid;
-    grid-template-areas: 'amount amount' 'toSasha toPetya';
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 50px);
     row-gap: 5px;
-  }
-
-  .transitions__amount {
-    grid-area: amount;
-  }
-
-  .transitions__to-sasha {
-    grid-area: toSasha;
-  }
-
-  .transitions__to-petya {
-    grid-area: toPetya;
   }
 </style>

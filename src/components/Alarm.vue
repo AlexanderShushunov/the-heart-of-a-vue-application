@@ -20,13 +20,22 @@ export default {
 
 <style scoped>
   .alarm {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: green;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    pointer-events: none;
   }
 
   .alarm--on {
-    background-color: red;
+    animation: blink 1s step-start 0s infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      background-color: rgba(255, 0, 0, .5);
+    }
   }
 </style>

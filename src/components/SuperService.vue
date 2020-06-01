@@ -24,8 +24,8 @@ export default {
 <style scoped>
   .super-service {
     display: grid;
-    grid-template-columns: 100px 200px 300px;
-    column-gap: 10px;
+    grid-template-columns: 400px;
+    row-gap: 20px;
     margin: 10px;
   }
 </style>

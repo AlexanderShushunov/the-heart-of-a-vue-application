@@ -8,7 +8,7 @@ export const createBonusDomain = ({
     namespaced: true,
     state: () => ({
       'Sasha': 100,
-      'Petya': 20.5
+      'Petya': 20
     }),
     actions: {
       processBonus: ({ commit, rootGetters }, { name, value }) => {
