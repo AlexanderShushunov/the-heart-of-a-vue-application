@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { on } from './utils'
 import { createClientDomain } from './client'
 import { createBonusDomain } from './bonus'
 import { createFraudDetectionDomain } from './fraudDetection'
@@ -20,5 +21,8 @@ export default new Vuex.Store({
     client: clientDomain.module,
     bonus: bonusDomain.module,
     fraud: fraudDomain.module
-  }
+  },
+  plugins: [
+    on(bonusDomain.events.transactionComplete)(fraudDomain.handlers.checkTransaction)
+  ]
 })

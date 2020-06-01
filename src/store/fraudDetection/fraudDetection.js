@@ -1,5 +1,7 @@
+import { makeHandler } from '../utils'
+
 export const createFraudDetectionDomain = ({
-  moduleKey //eslint-disable-line no-unused-vars
+  moduleKey
 }) => ({
   module: {
     namespaced: true,
@@ -18,5 +20,8 @@ export const createFraudDetectionDomain = ({
       turnAlarmOn: state => state.alarm = true,
       turnAlarmOff: state => state.alarm = false
     }
+  },
+  handlers: {
+    checkTransaction: makeHandler(`${moduleKey}/check`)
   }
 })

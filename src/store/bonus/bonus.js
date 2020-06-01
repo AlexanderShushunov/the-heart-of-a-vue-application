@@ -1,5 +1,5 @@
 export const createBonusDomain = ({
-  moduleKey, //eslint-disable-line no-unused-vars
+  moduleKey,
   externalGetters: {
     getExperience
   }
@@ -11,19 +11,24 @@ export const createBonusDomain = ({
       'Petya': 20.5
     }),
     actions: {
-      processBonus: ({ commit, dispatch, rootGetters }, { name, value }) => {
+      processBonus: ({ commit, rootGetters }, { name, value }) => {
         const experience = rootGetters[getExperience](name)
         let points = calcPoints(experience, value)
         commit('addPoints', { name, points })
-        dispatch('fraud/check', points, { root: true })
+        commit('transactionComplete', points)
       }
     },
     mutations: {
       addPoints: (state, { name, points }) => {
         const prev = state[name] || 0
         state[name] = prev + points
-      }
+      },
+      // events
+      transactionComplete: () => {}
     }
+  },
+  events: {
+    transactionComplete: `${moduleKey}/transactionComplete`
   }
 })
 
