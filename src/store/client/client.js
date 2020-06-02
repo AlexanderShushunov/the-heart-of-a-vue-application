@@ -12,11 +12,11 @@ export const createClientDomain = ({
     }],
     getters: {
       getExperience: state => name => {
-        const ModuleD = state.find(client => client.name === name)
-        if (!ModuleD) {
+        const client = state.find(client => client.name === name)
+        if (!client) {
           return 0
         } else {
-          return new Date().getFullYear() - ModuleD.registrationYear
+          return new Date().getFullYear() - client.registrationYear
         }
       }
     }
