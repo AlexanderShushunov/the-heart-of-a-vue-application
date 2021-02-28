@@ -2,12 +2,12 @@
 
 Материалы к выступлению "Сердце Vue приложения".
 
-[Слайды](https://drive.google.com/file/d/1pizxPn-myqT7DPVXNr2xynzrrqfJ7Rvg/view?usp=sharing)
+## [2020.06.11 IT Week Tver](https://events.epam.com/events/it-week-tver-2020/talks/13883)
+- [Слайды](https://drive.google.com/file/d/1pizxPn-myqT7DPVXNr2xynzrrqfJ7Rvg/view?usp=sharing)
 
-## Видео
-
-### [Frontend Live 2020](https://frontendconf.ru/moscow/2020/abstracts/7023)
-[видео](https://youtu.be/t8OHe4uhVy4)
+## [2020.09.25 Frontend Live 2020](https://frontendconf.ru/moscow/2020/abstracts/7023)
+- [Слайды](https://drive.google.com/file/d/1YbjE5gYyHmF_Lx3q7FQ-wwkF2WmgyiLE/view?usp=sharing)
+- [Видео](https://youtu.be/t8OHe4uhVy4)
 
 ## Демо проект
 
