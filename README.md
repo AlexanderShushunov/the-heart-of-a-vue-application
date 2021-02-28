@@ -4,6 +4,11 @@
 
 [Слайды](https://drive.google.com/file/d/1pizxPn-myqT7DPVXNr2xynzrrqfJ7Rvg/view?usp=sharing)
 
+## Видео
+
+### [Frontend Live 2020](https://frontendconf.ru/moscow/2020/abstracts/7023)
+[видео](https://youtu.be/t8OHe4uhVy4)
+
 ## Демо проект
 
 В репозитории находится проект с примером, показанным в докладе.
